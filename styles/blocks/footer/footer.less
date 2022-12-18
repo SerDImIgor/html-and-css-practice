@@ -1,0 +1,149 @@
+.footer
+{
+    background: #212122;
+    display: flex;
+    &-position-icon
+    {
+        display: block;
+        width: 100%;
+        @media @screen-gt-s{
+            display: flex;
+        }
+        @media @screen-gt-m {
+            display: flex;
+        }
+
+
+    }
+    &-position-social-icon
+    {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        @media @screen-gt-s{
+            width: 50%;
+        }
+        @media @screen-gt-m {
+            width: 33%;
+        }
+
+        
+    }
+    &-position-app-icon
+    {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        @media @screen-gt-s{
+            width: 50%;
+        }
+        @media @screen-gt-m {
+            width: 33%;
+        }
+
+    }
+
+    
+    &-position-hh-icon
+    {
+        margin-top: 30px;
+        display: none;
+        @media @screen-gt-m {
+
+            display: block;
+            margin-left: auto; 
+            margin-right: 0;
+    
+        }
+
+    }
+
+
+    &-position-app-icon-js
+    {
+        display: flex;
+        @media @screen-gt-s{
+            margin-left: auto; 
+            margin-right: 0;
+    
+        }
+
+
+    }
+    &-social-button {
+        margin-right: 15px;
+
+    }
+
+    &-app-button {
+        margin-right: 8px;
+        @media @screen-gt-s{
+            margin-left: 8px;
+            margin-right: 0px;
+        }
+
+    }
+
+    &__horizontal-line
+    {
+        margin-top: 30px;
+        border: none;
+        height: 1px;
+        background-color: #666666;
+    }
+    &__text-button
+    {
+        margin-top: 15px;
+        margin-bottom: 22px;
+        color: #999999;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@icons_f: facebook, twitter, vk, instagram;
+
+.footer-button-icon {
+    background: none;
+    border: 0;
+    width: 36px;
+    height: 36px;
+    color: #fff;
+
+    each(@icons_f, {
+        &__@{value} {
+            background-image: url('@{value}.svg');
+        }
+    })
+}
+
+
+.footer-button-icon__hh {
+    background: none;
+    border: 0;
+    width: 46px;
+    height: 46px;
+    color: #fff;
+    background-image: url('hh.svg');
+
+
+}
+
+
+@icons_store: appstore, googlestore;
+
+.footer-app-icon {
+    background: none;
+    border: 0;
+    width: 140px;
+    height: 40px;
+    color: #fff;
+
+    each(@icons_store, {
+        &__@{value} {
+            background-image: url('@{value}.svg');
+        }
+    })
+}
