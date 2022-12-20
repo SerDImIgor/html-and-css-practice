@@ -403,37 +403,6 @@ body {
 
 .services {
   background-color: #eee;
-  display: flex;
-}
-
-.services-content {
-  height: 240px;
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .services-content {
-    height: 100px;
-    display: flex;
-  }
-}
-
-@media (min-width: 1000px) {
-  .services-content {
-    height: 130px;
-    display: flex;
-  }
-}
-
-.services-behavior {
-  margin-top: 30px;
-  display: flex;
-}
-
-@media (min-width: 1000px) {
-  .services-behavior {
-    margin-top: 40px;
-  }
 }
 
 .services__img {
@@ -449,10 +418,8 @@ body {
 }
 
 .services__text {
-  max-width: 170px;
+  max-width: 190px;
   margin-left: 20px;
-  font-family: Arial;
-  font-size: 14px;
   line-height: 20px;
 }
 
@@ -468,90 +435,106 @@ body {
   }
 }
 
-.footer {
-  background: #212122;
-  display: flex;
-}
-
-.footer-position-icon {
-  width: 100%;
-  display: block;
+.services-content {
+  padding-bottom: 30px;
 }
 
 @media (min-width: 768px) {
-  .footer-position-icon {
+  .services-content {
     display: flex;
   }
 }
 
 @media (min-width: 1000px) {
-  .footer-position-icon {
+  .services-content {
+    display: flex;
+  }
+}
+
+.services-behavior {
+  margin-top: 30px;
+  display: flex;
+}
+
+@media (min-width: 1000px) {
+  .services-behavior {
+    margin-top: 40px;
+  }
+}
+
+.footer {
+  background: #212122;
+}
+
+.footer__content {
+  padding-top: 30px;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .footer__content {
+    display: flex;
+  }
+}
+
+.footer__horizontal-line {
+  height: 1px;
+  background-color: #666;
+  border: none;
+  margin-top: 30px;
+}
+
+.footer__text-button {
+  color: #999;
+  padding-top: 15px;
+  padding-bottom: 22px;
+}
+
+.footer-column {
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .footer-column {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer-column {
+    width: 33%;
+  }
+}
+
+.footer-column_hide {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .footer-column_hide {
+    justify-content: flex-end;
     display: flex;
   }
 }
 
 .footer-position-social-icon {
-  width: 100%;
-  margin-top: 30px;
   display: flex;
-}
-
-@media (min-width: 768px) {
-  .footer-position-social-icon {
-    width: 50%;
-  }
-}
-
-@media (min-width: 1000px) {
-  .footer-position-social-icon {
-    width: 33%;
-  }
-}
-
-.footer-position-app-icon {
-  width: 100%;
-  margin-top: 30px;
-  display: flex;
-}
-
-@media (min-width: 768px) {
-  .footer-position-app-icon {
-    width: 50%;
-  }
-}
-
-@media (min-width: 1000px) {
-  .footer-position-app-icon {
-    width: 33%;
-  }
-}
-
-.footer-position-hh-icon {
-  margin-top: 30px;
-  display: none;
-}
-
-@media (min-width: 1000px) {
-  .footer-position-hh-icon {
-    margin-left: auto;
-    margin-right: 0;
-    display: block;
-  }
-}
-
-.footer-position-app-icon-js {
-  display: flex;
-}
-
-@media (min-width: 768px) {
-  .footer-position-app-icon-js {
-    margin-left: auto;
-    margin-right: 0;
-  }
 }
 
 .footer-social-button {
   margin-right: 15px;
+}
+
+.footer-position-app-icon {
+  margin-top: 30px;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .footer-position-app-icon {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
 }
 
 .footer-app-button {
@@ -565,24 +548,6 @@ body {
   }
 }
 
-.footer__horizontal-line {
-  height: 1px;
-  background-color: #666;
-  border: none;
-  margin-top: 30px;
-}
-
-.footer__text-button {
-  color: #999;
-  margin-top: 15px;
-  margin-bottom: 22px;
-  font-family: Arial;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-}
-
 .footer-button-icon {
   width: 36px;
   height: 36px;
@@ -591,23 +556,23 @@ body {
   border: 0;
 }
 
-.footer-button-icon__facebook {
+.footer-button-icon_facebook {
   background-image: url("facebook.8a0d7a08.svg");
 }
 
-.footer-button-icon__twitter {
+.footer-button-icon_twitter {
   background-image: url("twitter.2ecbc564.svg");
 }
 
-.footer-button-icon__vk {
+.footer-button-icon_vk {
   background-image: url("vk.e06af254.svg");
 }
 
-.footer-button-icon__instagram {
+.footer-button-icon_instagram {
   background-image: url("instagram.8ab53335.svg");
 }
 
-.footer-button-icon__hh {
+.footer-button-icon-hh {
   width: 46px;
   height: 46px;
   color: #fff;
@@ -623,11 +588,11 @@ body {
   border: 0;
 }
 
-.footer-app-icon__appstore {
+.footer-app-icon_appstore {
   background-image: url("appstore.85c304e6.svg");
 }
 
-.footer-app-icon__googlestore {
+.footer-app-icon_googlestore {
   background-image: url("googlestore.93a90868.svg");
 }
 
