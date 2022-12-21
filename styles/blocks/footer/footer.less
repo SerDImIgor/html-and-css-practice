@@ -1,0 +1,112 @@
+.footer {
+    background: #212122;
+   
+    &__content {
+        padding-top: 30px;
+        display: block;
+
+        @media @screen-gt-s{
+            display: flex;
+        }
+    }
+
+    &__horizontal-line {
+        margin-top: 30px;
+        border: none;
+        height: 1px;
+        background-color: #666666;
+    }
+
+    &__text-button {
+        padding-top: 15px;
+        padding-bottom: 22px;
+        color: #999999;
+    }
+}
+
+.footer-column {
+    width: 100%;
+    @media @screen-only-m{
+        width: 50%;
+    }
+    @media @screen-gt-m{
+        width: 33%;
+    }
+}
+
+.footer-column_hide {
+    display: none;
+    @media @screen-only-l {
+        width: 34%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.footer-position-social-icon {
+    display: flex;
+}
+
+.footer-social-button {
+    margin-right: 15px;
+}
+
+.footer-position-app-icon {
+    display: flex;
+    margin-top: 30px;
+    @media @screen-gt-s {
+        justify-content: flex-end;
+        margin-top: 0;
+    }        
+}
+
+.footer-app-button {
+    margin-right: 8px;
+    @media @screen-gt-s {
+        margin-left: 8px;
+        margin-right: 0px;
+    }
+
+}
+
+@icons_f: facebook, twitter, vk, instagram;
+
+.footer-button-icon {
+    background: none;
+    border: 0;
+    width: 36px;
+    height: 36px;
+    color: #fff;
+
+    each(@icons_f, {
+        &_@{value} {
+            background-image: url('@{value}.svg');
+        }
+    })
+}
+
+.footer-button-icon-hh {
+    background: none;
+    border: 0;
+    width: 46px;
+    height: 46px;
+    color: #fff;
+    background-image: url('hh.svg');
+
+}
+
+@icons_store: appstore, googlestore;
+
+.footer-app-icon {
+    background: none;
+    border: 0;
+    width: 140px;
+    height: 40px;
+    color: #fff;
+
+    each(@icons_store, {
+        &_@{value} {
+            background-image: url('@{value}.svg');
+        }
+    })
+}
